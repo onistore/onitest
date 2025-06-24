@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ONISTORE - HOME</title>
+  <title>Header Responsif - ONISTORE</title>
   <style>
     *, html, body {
       margin: 0;
@@ -159,49 +159,9 @@ span {
   text-align: center;
   width: auto;
 }
-.img-foto {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  padding: 10px;
-}
-.parallax {
-  background-image: url('logo store.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: auto;
-}
-
-.tentang {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #1a2238;
-  color: #eaeaea;
-  padding: 20px ;
-  width: auto;
-}
-.title {
-  font-size: 20px;
-  font-weight: bold;
-}
-.btn-game {
-  margin-right: 10px;
-  border: none;
-  font-size: 15px;
-  padding: 5px 10px;
-  background: #FFD700;
-  color: #1a2238;
-  border-radius: 6px;
-  cursor: pointer;
-}
   </style>
 </head>
-<body bgcolor=lightblue>
+<body bgcolor="skyblue">
   <header>
     <h1 class="logo"><a href="https://www.onistore.biz.id/">ONISTORE</a></h1>
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -216,12 +176,12 @@ span {
         <li><a href="https://www.onistore.biz.id/suntik/">SUNTIK SOSMED</a></li>
         <li><a href="https://www.onistore.biz.id/allproduk/">ALL PRODUK</a></li>
         <li><a href="https://www.onistore.biz.id/testimoni/">TESTIMONI</a></li>
-        <li><button class="btn-cta" onclick="contact()">CONTACT ME</button></li>
+        <li><button class="btn-cta" onclick="rediryoutube()">CONTACT ME</button></li>
       </ul>
     </nav>
   </header>
 
-  <div class="container">
+<div class="container">
       <div class="intro">
          <marquee align='center' bgcolor='green' width='auto'><h2>SEDANG PERBAIKAN WEBSITE</h2></marquee>
         <p class="title">HELLO, WELCOME TO ONISTORE!</p>
@@ -231,14 +191,6 @@ span {
       </div>
     </div>
 
-    <div class="parallax">
-      <div class="tentang">
-        <p class="title">SECOND WEBSITE & CONTACT ME</p> <br>
-        <button class="btn-game" onclick="redirwa()"><h7>GROUP WHATSAPP</h7></button> <br>
-        <button class="btn-game" onclick="redirdc()"><h7>DISCORD</h7></button> <br>
-        <button class="btn-game" onclick="redirgames()"><h7>GAMES AREA</h7></button> <br>
-      </div>
-    </div>
 
   <div class="copyright">
     <br>
@@ -265,23 +217,9 @@ span {
         window.location.href = "https://wa.me/6283896816700"
       }
 
-    function contact() {
+    function rediryoutube() {
       window.location.href = "https://kontak.onistore.biz.id/";
     }
-
-    function redirwa() {
-      window.location.href = "https://chat.whatsapp.com/HfXYlzJmpTN6qRHxUbrf2v"
-    }
-
-    function redirdc() {
-      window.location.href = "https://discord.gg/hetC5YHQZb"
-    }
-
-    function redirgames()() {
-      window.location.href = "https://games.onistore.biz.id/";
-    }
-
   </script>
 </body>
 </html>
-  
