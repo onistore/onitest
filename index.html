@@ -159,6 +159,41 @@ span {
   text-align: center;
   width: auto;
 }
+
+.parallax {
+  background-image: url('logo store.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+}
+
+.tentang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #1a2238;
+  color: #eaeaea;
+  padding: 20px ;
+  width: auto;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.btn-game {
+  margin-right: 10px;
+  border: none;
+  font-size: 15px;
+  padding: 5px 10px;
+  background: #FFD700;
+  color: #1a2238;
+  border-radius: 6px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body bgcolor="skyblue">
@@ -176,12 +211,12 @@ span {
         <li><a href="https://www.onistore.biz.id/suntik/">SUNTIK SOSMED</a></li>
         <li><a href="https://www.onistore.biz.id/allproduk/">ALL PRODUK</a></li>
         <li><a href="https://www.onistore.biz.id/testimoni/">TESTIMONI</a></li>
-        <li><button class="btn-cta" onclick="rediryoutube()">CONTACT ME</button></li>
+        <li><button class="btn-cta" onclick="redirkontak()">CONTACT ME</button></li>
       </ul>
     </nav>
   </header>
 
-<div class="container">
+    <div class="container">
       <div class="intro">
          <marquee align='center' bgcolor='green' width='auto'><h2>SEDANG PERBAIKAN WEBSITE</h2></marquee>
         <p class="title">HELLO, WELCOME TO ONISTORE!</p>
@@ -191,6 +226,14 @@ span {
       </div>
     </div>
 
+    <div class="parallax">
+      <div class="tentang">
+        <p class="title">SECOND WEBSITE & CONTACT ME</p> <br>
+        <button class="btn-game" onclick="redirwa()"><h7>GROUP WHATSAPP</h7></button> <br>
+        <button class="btn-game" onclick="redirdc()"><h7>DISCORD</h7></button> <br>
+        <button class="btn-game" onclick="redirgames()"><h7>GAMES AREA</h7></button> <br>
+      </div>
+    </div>
 
   <div class="copyright">
     <br>
@@ -217,8 +260,20 @@ span {
         window.location.href = "https://wa.me/6283896816700"
       }
 
-    function rediryoutube() {
+    function redirkontak() {
       window.location.href = "https://kontak.onistore.biz.id/";
+    }
+
+    function redirwa() {
+      window.location.href = "https://chat.whatsapp.com/HfXYlzJmpTN6qRHxUbrf2v"
+    }
+
+    function redirdc() {
+      window.location.href = "https://discord.gg/hetC5YHQZb"
+    }
+
+    function redirgames() {
+      window.location.href = "https://games.onistore.biz.id/";
     }
   </script>
 </body>
