@@ -225,7 +225,7 @@
       <li><a href="https://www.onistore.biz.id/suntik/">SUNTIK SOSMED</a></li>
       <li><a href="https://www.onistore.biz.id/allproduk">ALL PRODUK</a></li>
       <li><a href="https://www.onistore.biz.id/testimoni/">TESTIMONI</a></li>
-      <li><button class="btn-cta" onclick="rediryoutube()">CONTACT ME</button></li>
+      <li><button class="btn-cta" onclick="redirkontak()">CONTACT ME</button></li>
     </ul>
   </nav>
 </header>
@@ -286,7 +286,7 @@
     document.getElementById('navLinks').classList.toggle('show');
   }
 
-  function rediryoutube() {
+  function redirkontak() {
     window.location.href = "https://kontak.onistore.biz.id/";
   }
 
@@ -319,7 +319,15 @@
   });
 
   document.getElementById("buyBtn").addEventListener("click", function () {
-    window.location.href = "https://onistore.biz.id/onistore/cekout.html";
+    const warna = selectWarna.value;
+    const harga = hargaMap[warna];
+    const hargaFormat = new Intl.NumberFormat('id-ID').format(harga);
+
+    const pesan = `Halo, saya ingin membeli produk berikut:%0A%0AProduk: SANDAL JEPIT PRIA DISTRO KEREN TERBARU%0APilihan Warna: ${warna}%0AHarga: Rp${hargaFormat}`;
+    const nomorWA = '6281234567890'; // ← GANTI dengan nomor WhatsApp Anda
+
+    const linkWA = `https://wa.me/${nomorWA}?text=${pesan}`;
+    window.open(linkWA, '_blank');
   });
 </script>
 
