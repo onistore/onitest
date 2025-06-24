@@ -108,7 +108,6 @@
       }
     }
 
-    /* Produk Style */
     body {
       background: #f5f5f5;
     }
@@ -252,11 +251,9 @@
       <div class="title">SANDAL JEPIT PRIA DISTRO KEREN TERBARU</div>
       <div class="price" id="hargaDisplay">Rp6.910</div>
 
-      <label class="option-label">Pilih Warna:</label>
+      <label class="option-label">Pilih:</label>
       <select id="warnaSelect" class="select-box">
-        <option value="Hitam">Hitam</option>
-        <option value="Merah">Merah</option>
-        <option value="Putih">Putih</option>
+        <option value="Pilihan">Pilihan</option>
       </select>
 
       <button class="buy-button" id="buyBtn">BELI SEKARANG</button>
@@ -273,7 +270,7 @@
     <ul>
       <li>Bahan empuk dan awet</li>
       <li>Sol kuat anti slip</li>
-      <li>Tersedia warna: Hitam, Merah, Putih</li>
+      <li>Pilihan: 1 model</li>
     </ul>
   </div>
 
@@ -291,9 +288,7 @@
   }
 
   const hargaMap = {
-    "Hitam": 6910,
-    "Merah": 7500,
-    "Putih": 6500
+    "Pilihan": 6910
   };
 
   const selectWarna = document.getElementById('warnaSelect');
@@ -323,8 +318,8 @@
     const harga = hargaMap[warna];
     const hargaFormat = new Intl.NumberFormat('id-ID').format(harga);
 
-    const pesan = `Halo, saya ingin membeli produk berikut:%0A%0AProduk: SANDAL JEPIT PRIA DISTRO KEREN TERBARU%0APilihan Warna: ${warna}%0AHarga: Rp${hargaFormat}`;
-    const nomorWA = '6283896816700'; // ← GANTI dengan nomor WhatsApp Anda
+    const pesan = `Halo, saya ingin membeli produk berikut:%0A%0AProduk: SANDAL JEPIT PRIA DISTRO KEREN TERBARU%0APilihan: ${warna}%0AHarga: Rp${hargaFormat}`;
+    const nomorWA = '6283896816700'; // GANTI dengan nomor WhatsApp Anda
 
     const linkWA = `https://wa.me/${nomorWA}?text=${pesan}`;
     window.open(linkWA, '_blank');
