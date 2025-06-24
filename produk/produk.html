@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Detail Produk - ONISTORE</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
@@ -23,6 +23,8 @@
       gap: 20px;
       width: 100%;
       padding: 20px;
+      position: relative;
+      z-index: 999;
     }
 
     .logo {
@@ -42,6 +44,7 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
+      z-index: 9999;
     }
 
     .menu-toggle div {
@@ -92,6 +95,7 @@
         top: 60px;
         width: 200px;
         padding: 1rem;
+        z-index: 9999;
       }
 
       nav ul.show {
@@ -232,13 +236,12 @@
 <div class="container">
 
   <div class="product-section">
-    <!-- KIRI: FOTO -->
     <div class="left-content">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="https://onitest.vercel.app/logo store.png" alt="F1"></div>
-          <div class="swiper-slide"><img src="https://onitest.vercel.app/logo store.png" alt="F2"></div>
-          <div class="swiper-slide"><img src="https://onitest.vercel.app/logo store.png" alt="F3"></div>
+          <div class="swiper-slide"><img src="sandal1.jpg" alt="Sandal 1"></div>
+          <div class="swiper-slide"><img src="sandal2.jpg" alt="Sandal 2"></div>
+          <div class="swiper-slide"><img src="sandal3.jpg" alt="Sandal 3"></div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
@@ -246,7 +249,6 @@
       </div>
     </div>
 
-    <!-- KANAN: INFORMASI -->
     <div class="right-content">
       <div class="title">SANDAL JEPIT PRIA DISTRO KEREN TERBARU</div>
       <div class="price" id="hargaDisplay">Rp6.910</div>
@@ -262,7 +264,6 @@
     </div>
   </div>
 
-  <!-- DESKRIPSI -->
   <div class="description">
     <h3>Deskripsi Produk</h3>
     <p>
@@ -272,13 +273,12 @@
     <ul>
       <li>Bahan empuk dan awet</li>
       <li>Sol kuat anti slip</li>
-      <li>Pilihan warna: Pilihan 1, Pilihan 2, Pilihan 3</li>
+      <li>3 Pilihan model tersedia</li>
     </ul>
   </div>
 
 </div>
 
-<!-- SwiperJS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   function toggleMenu() {
@@ -318,11 +318,11 @@
   });
 
   document.getElementById("buyBtn").addEventListener("click", function () {
-    const warna = selectWarna.value;
-    const harga = hargaMap[warna];
+    const pilihan = selectWarna.value;
+    const harga = hargaMap[pilihan];
     const hargaFormat = new Intl.NumberFormat('id-ID').format(harga);
 
-    const pesan = `Halo, saya ingin membeli produk berikut:%0A%0AProduk: SANDAL JEPIT PRIA DISTRO KEREN TERBARU%0APilihan: ${warna}%0AHarga: Rp${hargaFormat}`;
+    const pesan = `Halo, saya ingin membeli produk berikut:%0A%0AProduk: SANDAL JEPIT PRIA DISTRO KEREN TERBARU%0APilihan: ${pilihan}%0AHarga: Rp${hargaFormat}`;
     const nomorWA = '6283896816700'; // ← GANTI dengan nomor WhatsApp Anda
 
     const linkWA = `https://wa.me/${nomorWA}?text=${pesan}`;
