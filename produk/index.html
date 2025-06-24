@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Produk - ONISTORE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    *, html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    header {
+      background: #1a2238;
+      color: #eaeaea;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .logo {
+      margin-right: auto;
+      margin-left: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all .5s ease 0s;
+    }
+
+    .logo:hover {
+      color: #FFD700;
+      transform: rotate(5deg);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    li a {
+      color: #eaeaea;
+      text-decoration: none;
+      transition: all .5s ease 0s;
+    }
+
+    li a:hover {
+      color: #ff6a3d;
+      transform: rotate(3deg);
+    }
+
+    .btn-cta {
+      border: none;
+      font-size: 16px;
+      padding: 6px 12px;
+      background: #ff0000;
+      color: #eaeaea;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1a2238;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+        padding: 1rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .btn-cta {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    /* Produk Style */
+    body {
+      background: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .left-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .right-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .price {
+      font-size: 20px;
+      color: red;
+      margin: 10px 0;
+    }
+
+    .option-label {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .select-box {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .buy-button {
+      padding: 12px 20px;
+      background: orangered;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .description {
+      margin-top: 30px;
+      max-height: 200px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 80%) {
+      .product-section {
+        flex-direction: column;
+      }
+    }
+
+    a {
+      color: #eaeaea;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="logo"><a href="https://www.onistore.biz.id/">ONISTORE</a></h1>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+  <nav>
+    <ul id="navLinks">
+      <li><a href="https://www.onistore.biz.id/cloud/">CLOUD</a></li>
+      <li><a href="https://www.onistore.biz.id/topup/">TOP UP GAME</a></li>
+      <li><a href="https://www.onistore.biz.id/suntik/">SUNTIK SOSMED</a></li>
+      <li><a href="https://www.onistore.biz.id/allproduk">ALL PRODUK</a></li>
+      <li><a href="https://www.onistore.biz.id/testimoni/">TESTIMONI</a></li>
+      <li><button class="btn-cta" onclick="rediryoutube()">CONTACT ME</button></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="product-section">
+    <!-- KIRI: FOTO -->
+    <div class="left-content">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="sandal1.jpg" alt="Sandal 1"></div>
+          <div class="swiper-slide"><img src="sandal2.jpg" alt="Sandal 2"></div>
+          <div class="swiper-slide"><img src="sandal3.jpg" alt="Sandal 3"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <!-- KANAN: INFORMASI -->
+    <div class="right-content">
+      <div class="title">SANDAL JEPIT PRIA DISTRO KEREN TERBARU</div>
+      <div class="price" id="hargaDisplay">Rp6.910</div>
+
+      <label class="option-label">Pilih Warna:</label>
+      <select id="warnaSelect" class="select-box">
+        <option value="Hitam">Hitam</option>
+        <option value="Merah">Merah</option>
+        <option value="Putih">Putih</option>
+      </select>
+
+      <button class="buy-button" id="buyBtn">BELI SEKARANG</button>
+    </div>
+  </div>
+
+  <!-- DESKRIPSI -->
+  <div class="description">
+    <h3>Deskripsi Produk</h3>
+    <p>
+      Sandal jepit pria distro terbaru dengan desain modern dan bahan berkualitas tinggi.
+      Nyaman digunakan untuk aktivitas harian baik di rumah maupun saat bepergian.
+    </p>
+    <ul>
+      <li>Bahan empuk dan awet</li>
+      <li>Sol kuat anti slip</li>
+      <li>Tersedia warna: Hitam, Merah, Putih</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- SwiperJS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('show');
+  }
+
+  function rediryoutube() {
+    window.location.href = "https://kontak.onistore.biz.id/";
+  }
+
+  const hargaMap = {
+    "Hitam": 6910,
+    "Merah": 7500,
+    "Putih": 6500
+  };
+
+  const selectWarna = document.getElementById('warnaSelect');
+  const hargaDisplay = document.getElementById('hargaDisplay');
+
+  selectWarna.addEventListener('change', () => {
+    const selected = selectWarna.value;
+    const harga = hargaMap[selected];
+    const format = new Intl.NumberFormat('id-ID').format(harga);
+    hargaDisplay.textContent = `Rp${format}`;
+  });
+
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+  });
+
+  document.getElementById("buyBtn").addEventListener("click", function () {
+    window.location.href = "https://onistore.biz.id/onistore/cekout.html";
+  });
+</script>
+
+</body>
+</html>
