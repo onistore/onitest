@@ -253,7 +253,9 @@
 
       <label class="option-label">Pilih:</label>
       <select id="warnaSelect" class="select-box">
-        <option value="Pilihan">Pilihan</option>
+        <option value="Pilihan 1">Pilihan 1</option>
+        <option value="Pilihan 2">Pilihan 2</option>
+        <option value="Pilihan 3">Pilihan 3</option>
       </select>
 
       <button class="buy-button" id="buyBtn">BELI SEKARANG</button>
@@ -270,7 +272,7 @@
     <ul>
       <li>Bahan empuk dan awet</li>
       <li>Sol kuat anti slip</li>
-      <li>Pilihan: 1 model</li>
+      <li>Pilihan warna: Pilihan 1, Pilihan 2, Pilihan 3</li>
     </ul>
   </div>
 
@@ -288,7 +290,9 @@
   }
 
   const hargaMap = {
-    "Pilihan": 6910
+    "Pilihan 1": 6910,
+    "Pilihan 2": 7500,
+    "Pilihan 3": 6500
   };
 
   const selectWarna = document.getElementById('warnaSelect');
@@ -319,7 +323,7 @@
     const hargaFormat = new Intl.NumberFormat('id-ID').format(harga);
 
     const pesan = `Halo, saya ingin membeli produk berikut:%0A%0AProduk: SANDAL JEPIT PRIA DISTRO KEREN TERBARU%0APilihan: ${warna}%0AHarga: Rp${hargaFormat}`;
-    const nomorWA = '6283896816700'; // GANTI dengan nomor WhatsApp Anda
+    const nomorWA = '6283896816700'; // ← GANTI dengan nomor WhatsApp Anda
 
     const linkWA = `https://wa.me/${nomorWA}?text=${pesan}`;
     window.open(linkWA, '_blank');
