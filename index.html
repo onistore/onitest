@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header Responsif - ONISTORE</title>
+  <style>
+    *, html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    header {
+      background: #1a2238;
+      color: #eaeaea;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .logo {
+      margin-right: auto;
+      margin-left: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all .5s ease 0s;
+    }
+
+    .logo:hover {
+      color: #FFD700;
+      transform: rotate(5deg);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    li a {
+      color: #eaeaea;
+      text-decoration: none;
+      transition: all .5s ease 0s;
+    }
+
+    li a:hover {
+      color: #ff6a3d;
+      transform: rotate(3deg);
+    }
+
+    .btn-cta {
+      border: none;
+      font-size: 16px;
+      padding: 6px 12px;
+      background: #ff0000;
+      color: #eaeaea;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1a2238;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+        padding: 1rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .btn-cta {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    a {
+      color: #eaeaea;
+      text-decoration: none;
+    }
+
+    .copyright {
+  color: #eaeaea;
+  background: #1a2238;
+}
+span {
+  color: #800080;
+}
+
+.btn-pink{
+  background: #B721FF;
+  color: #fff;
+  border-color: #B721FF;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 0.55rem 0;
+  width: 130px;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  color:#fff;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo"><a href="https://www.onistore.biz.id/">ONISTORE</a></h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul id="navLinks">
+        <li><a href="https://www.onistore.biz.id/cloud/">CLOUD</a></li>
+        <li><a href="https://www.onistore.biz.id/topup/">TOP UP GAME</a></li>
+        <li><a href="https://www.onistore.biz.id/suntik/">SUNTIK SOSMED</a></li>
+        <li><a href="https://www.onistore.biz.id/allproduk/">ALL PRODUK</a></li>
+        <li><a href="https://www.onistore.biz.id/testimoni/">TESTIMONI</a></li>
+        <li><button class="btn-cta" onclick="rediryoutube()">CONTACT ME</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <br><br>
+
+  <div class="copyright">
+    <br>
+    <h1 align="center">ONISTORE<span>!</span></h1>
+    <h2 align="center">MENYEDIAKAN BANYAK PRODUK DIGITAL</h2>
+      <p align="center">TOP UP GAME || SUNTIK FOLLOWER || PREMIUM PRODUK || CLOUD || DAN MASIH BANYAK LAGI </p>
+      <p align="center">●》 📧EMAIL: syaroniyt@gmail.com</p>
+      <p align="center">●》 📞NO: 083896816700</p> 
+      <p align="center">●》 📍ONISTORE</p> 
+      <br><br>
+        <div class="btns" align="center">
+          <button  onclick="wa()" class ="btn-pink">WHATSAPP ME</button>
+        </div><br>
+      <p align='center' width="auto">&copy; By Syaroni YT</p>
+  </div>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
+    
+    function wa() {
+        window.location.href = "https://wa.me/6283896816700"
+      }
+
+    function rediryoutube() {
+      window.location.href = "https://kontak.onistore.biz.id/";
+    }
+  </script>
+</body>
+</html>
